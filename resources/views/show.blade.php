@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-Page 8 of 9
  <head>
  <title>Account {{ $account->id }}</title>
  </head>
