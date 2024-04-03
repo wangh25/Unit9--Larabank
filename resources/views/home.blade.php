@@ -16,7 +16,7 @@
 
                     You are logged in!
                     <br> 
-                    <a href="{{ route('display_account') }}" class="btn btnprimary">Display Accounts </a> 
+                    <a href="{{ route('list_account') }}" class="btn btnprimary">List Accounts </a> 
                 </div>
             </div>
         </div>
