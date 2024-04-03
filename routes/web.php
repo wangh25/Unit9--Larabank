@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\AccountController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,13 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
-Route::get('list', 'AccountController@list');
-Route::get('show/{id}', 'AccountController@show');
+Route::get('list',[AccountController::class,'list'])->name('list_account');
+Route::get('show/{id}', [AccountController::class,'show']);
 
-Route::get('/home', 'HomeController@index')->name('home');
-Route::get('display', 'AccountController@display')->name('display_account');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
